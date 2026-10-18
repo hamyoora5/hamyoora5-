@@ -34,7 +34,9 @@
 
 ## 실무 프로젝트 (In Production)
 
-> 사내 시스템으로 저장소는 비공개입니다.
+> **사내 시스템이라 소스 코드는 공개하지 않습니다.** 화면시안·기획 문서만 HTML로 첨부하며,
+> 그 안의 업체명·제품코드·수량·금액·연락처는 **모두 가상의 값으로 가공**했습니다.
+> 실제 데이터는 들어 있지 않습니다.
 
 ### 1. 외주 생산관리 대시보드 — 운영 중
 
@@ -45,12 +47,14 @@
     *   **마감 교차 대조:** 기준 파일 5종을 대조해 수량·정산금액 확정
 *   **설계 관점:** 기존 엑셀 업무 방식은 유지하고 집계·문서 생성만 자동화하여 현장 도입 저항 최소화
 *   **기술 스택:** Python, Flask, SQLAlchemy, PostgreSQL (Aurora), Docker, AWS App Runner, Microsoft Graph, SSO SSO
+*   **화면시안:** [23개 화면 동작 시안](https://hamyoora5.github.io/hamyoora5-/showcase/neovms/demo.html) · [사용자 매뉴얼 16장](https://hamyoora5.github.io/hamyoora5-/showcase/neovms/manual.html) · [설명](showcase/neovms/README.md)
 
 ### 2. 외주 통합관리 시스템 — 설계 단계
 
 *   **소개:** 발주 → 생산 시작 → 품질검사 → 출고 → 마감 정산 → 지급으로 흩어진 외주 업무를 단일 시스템으로 일원화하는 설계. 1차 범위는 비실시간 원격 품질검사와 거래명세서 등록
 *   **산출물:** 화면정의서 42종, 클릭 가능한 화면 시안 57종, 아키텍처 설계, DB 구조 검토안
 *   **설계 관점:** 같은 사실을 여러 곳에 중복 기록하는 구조 제거, 증빙 무결성 확보, 향후 검사 자동화를 위한 데이터 축적 전제
+*   **화면시안:** [클릭 가능한 화면 시안](https://hamyoora5.github.io/hamyoora5-/showcase/remote-inspection/mockup.html)
 
 ### 3. 반복 업무 자동화
 
