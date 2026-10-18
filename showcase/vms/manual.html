@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>외주관리 시스템 사용자 매뉴얼 — 외주관리시스템</title>
+<title>VMS 사용자 매뉴얼 — 외주관리시스템</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -134,7 +134,7 @@ td code{white-space:nowrap}
 
 <div class="shell">
 <nav class="toc">
-  <div class="k">SHOWCASE</div>
+  <div class="k">VMS</div>
   <h2>외주관리시스템<br>사용자 매뉴얼</h2>
   <ol>
     <li><a href="#s1">시작하기 — 접속과 권한</a></li>
@@ -163,9 +163,9 @@ td code{white-space:nowrap}
 
 <main class="doc">
 <div class="cover">
-  <span class="mark">회사 ✦ NEO</span>
+  <span class="mark">VMS</span>
   <h1>외주관리시스템 사용자 매뉴얼
-    <small>외주관리 시스템 — 운영 화면 기준 · 문서 v2.0</small></h1>
+    <small>VMS — 운영 화면 기준 · 문서 v2.0</small></h1>
   <p>외주 발주내역과 입고현황을 토대로 지금 외주가 어디까지 왔는지 보고 관리하는 시스템입니다.
     클라우드 문서 엑셀을 원본으로 읽어 업체별 진행률과 설비 점유율을 집계하고,
     부자재 기록서 생성부터 월 마감 대조 · 월 지표 집계까지 한 흐름으로 다룹니다.</p>
@@ -315,7 +315,7 @@ td code{white-space:nowrap}
     <b>흐름과 이상 징후를 먼저 보고, 숫자를 따져야 할 때 펼칩니다.</b></div>
 
   <h4>월 선택이 없는 이유</h4>
-  <p>적재된 발주번호(<code>NEO-YYYYMM-####</code>)의 <b>최신 월을 자동으로 기준월로 잡습니다.</b>
+  <p>적재된 발주번호(<code>ORD-YYYYMM-####</code>)의 <b>최신 월을 자동으로 기준월로 잡습니다.</b>
     새 달 시트가 아직 없으면 지난달이 기준이 됩니다. 1일 아침에 들어와 지난달 숫자가 보이는 것은 정상이고,
     배너에 <b>"○월 시트 없음"</b> 이라고 함께 적힙니다.</p>
 
@@ -871,7 +871,7 @@ td code{white-space:nowrap}
   </table></div>
   <div class="note"><span class="t">날짜 칸 주의</span>
     발주 · 입고의 날짜 컬럼은 문자열이고 '직납' · '환입' 같은 메모가 섞여 있습니다.
-    발주는 <b>발주번호(NEO-YYYYMM-####)</b>, 입고는 날짜가 없으면 <b>시트 월</b>로 가릅니다. 대시보드가 쓰는 기준과 같습니다.<br>
+    발주는 <b>발주번호(ORD-YYYYMM-####)</b>, 입고는 날짜가 없으면 <b>시트 월</b>로 가릅니다. 대시보드가 쓰는 기준과 같습니다.<br>
     <b>등록 이용자 수</b>는 내장 계정(admin)과 승인 대기를 빼고 셉니다 — 관리자 화면 숫자와 같게 맞춘 것입니다.<br>
     <b>부자재 기록서 생성</b>은 ZIP 일괄 다운로드를 1건으로 셉니다.</div>
 
@@ -1181,7 +1181,7 @@ td code{white-space:nowrap}
   <div class="tw"><table>
     <thead><tr><th style="width:175px">용어</th><th>뜻</th></tr></thead>
     <tbody>
-      <tr><td><b>발주번호</b></td><td><code>NEO-YYYYMM-####</code> 형식. 월 단위 일련번호입니다. 기준월을 정하는 근거이기도 합니다</td></tr>
+      <tr><td><b>발주번호</b></td><td><code>ORD-YYYYMM-####</code> 형식. 월 단위 일련번호입니다. 기준월을 정하는 근거이기도 합니다</td></tr>
       <tr><td><b>시트 탭</b></td><td>발주관리의 월 선택. 원본 엑셀에 실제로 있는 월 시트만 탭으로 나옵니다</td></tr>
       <tr><td><b>부자재 사용기록서</b></td><td>협력사에 넘기는 부자재 사용 내역 양식. 발주를 골라 협력사별로 한 번에 생성하며 2건 이상은 ZIP</td></tr>
       <tr><td><b>일 CAPA</b></td><td>그 업체가 하루에 만들 수 있는 양. Σ(라인수 × CAPA/1라인)</td></tr>
@@ -1206,7 +1206,7 @@ td code{white-space:nowrap}
 </section>
 
 <div class="foot">
-  <b>외주관리 시스템 사용자 매뉴얼</b> · 문서 v2.0 · 운영 기준 2026-10-18 · 운영 담당<br>
+  <b>VMS 사용자 매뉴얼</b> · 문서 v2.0 · 운영 기준 2026-10-18 · 운영 담당<br>
   운영 중인 화면 · 라우트 · 집계 코드를 근거로 작성했습니다.<br>
   이 문서는 <b>공개용</b>입니다. 실제 소스는 사내 비공개 저장소에 있으며,
   본문의 업체명 · 제품코드 · 수량 · 금액 · 계정은 모두 가상의 값입니다.<br>

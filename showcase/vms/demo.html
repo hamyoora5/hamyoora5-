@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>외주관리 시스템 화면시안 — 외주관리시스템</title>
+<title>VMS 화면시안 — 외주관리시스템</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -324,7 +324,7 @@ svg{display:block;max-width:100%;height:auto}
 <body>
 <div class="demobar">
   <span><b>화면시안 · DEMO</b></span>
-  <span>회사네오 외주관리시스템(외주관리 시스템) <b>운영 화면</b>을 그대로 옮긴 동작 시안입니다.</span>
+  <span>외주관리시스템(VMS) <b>운영 화면</b>을 그대로 옮긴 동작 시안입니다.</span>
   <span><b>표시되는 모든 업체명 · 제품코드 · 수량 · 금액은 가상의 값입니다.</b> 실제 운영 데이터는 들어 있지 않습니다.</span>
   <span class="sp">
     <button class="tgl" id="themeBtn">◐ 테마</button>
@@ -333,7 +333,7 @@ svg{display:block;max-width:100%;height:auto}
 </div>
 <div class="wrap">
   <nav class="rail">
-    <div class="kicker">SHOWCASE</div>
+    <div class="kicker">VMS</div>
     <h1>외주관리시스템 화면시안</h1>
     <div class="sub">운영 중 19화면 · 확장 계획 4화면. 왼쪽에서 화면을 고르면 실제 조작이 동작합니다.</div>
     <div id="rail"></div>
@@ -347,7 +347,7 @@ svg{display:block;max-width:100%;height:auto}
     </div>
     <div class="canvas"><div class="frame">
       <div class="dbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i>
-        <span class="durl" id="dUrl">https://vms.example.com/home</span>
+        <span class="durl" id="dUrl">https://vms.internal/home</span>
       </div>
       <div id="app"></div>
       <svg class="wm" aria-hidden="true"><defs>
@@ -359,7 +359,7 @@ svg{display:block;max-width:100%;height:auto}
       </svg>
     </div>
     <div class="foot">
-      외주관리 시스템 화면시안 · 실제 소스는 사내 비공개 저장소에 있습니다.<br>
+      VMS 화면시안 · 실제 소스는 사내 비공개 저장소에 있습니다.<br>
       이 시안은 <b>공개용</b>이며 사내 데이터 · 접속 정보 · 내부 주소를 포함하지 않습니다.
     </div></div>
   </div>
@@ -368,7 +368,7 @@ svg{display:block;max-width:100%;height:auto}
 <div id="modalHost"></div>
 <script>
 /* =========================================================================
-   외주관리 시스템 화면시안 — 운영 화면 기준 동작 시안 (공개용)
+   VMS 화면시안 — 운영 화면 기준 동작 시안 (공개용)
 
    근거: 운영 중인 템플릿·라우트·집계 코드. 화면정의서(10/05)보다 뒤에 바뀐
    부분 — 대시보드 통합(차트+세부 접기), 외주처 상세 팝업, 월 지표 집계,
@@ -494,7 +494,7 @@ SHEETS.forEach((m, mi) => {
     const recv = Math.round(qty * ratio);
     orders.push({
       id: seq, sheet: m,
-      orderNo: 'NEO-' + m + '-' + String(i + 1).padStart(4, '0'),
+      orderNo: 'ORD-' + m + '-' + String(i + 1).padStart(4, '0'),
       mail: rnd() > .45 ? '전송' : '미전송',
       sub: rnd() > .4 ? '생성완료' : '미생성',
       time: pick(ORDER_TIMES),
@@ -774,7 +774,7 @@ function sidebar(active) {
   const admin = S.role === 'Admin';
   return `<aside class="side">
     <div class="logo">
-      <span class="mark">회사 ✦ NEO</span>
+      <span class="mark">VMS</span>
       <div class="nm">외주관리시스템</div>
     </div>
     <div class="who"><span>👤 ${S.role === 'Admin' ? '홍길동' : (S.role === 'User' ? '김○○' : '이○○')}님</span>
@@ -1647,7 +1647,7 @@ function orderModal(id) {
     </div>
     <div class="sec">기본</div>
     <div class="fgrid">
-      <div class="fld"><label>발주번호 (자동 생성)</label><input class="inp auto" readonly value="${o ? o.orderNo : 'NEO-202610-' + String(last + 1).padStart(4, '0')}"></div>
+      <div class="fld"><label>발주번호 (자동 생성)</label><input class="inp auto" readonly value="${o ? o.orderNo : 'ORD-202610-' + String(last + 1).padStart(4, '0')}"></div>
       <div class="fld"><label class="req">협력사 (외주처)</label><select class="inp">${vendors.map(v => `<option ${o && v.name === o.vendor ? 'selected' : ''}>${v.name}</option>`).join('')}</select></div>
       <div class="fld"><label class="req">발주일자</label><input class="inp" type="date" value="${o ? o.date : '2026-10-18'}"></div>
       <div class="fld"><label class="req">시간</label><select class="inp">${ORDER_TIMES.map(t => `<option ${o && t === o.time ? 'selected' : ''}>${t}</option>`).join('')}</select></div>
@@ -2740,7 +2740,7 @@ function scr_M03() {
       }).join('')}</tbody>
     </table></div>
     <div class="mini">날짜 칸 주의 — 발주 · 입고의 날짜 컬럼은 문자열이고 '직납' · '환입' 같은 메모가 섞여 있습니다.
-      발주는 발주번호(NEO-YYYYMM-####), 입고는 날짜가 없으면 시트 월로 가릅니다. 대시보드가 쓰는 기준과 같습니다.</div>`}
+      발주는 발주번호(ORD-YYYYMM-####), 입고는 날짜가 없으면 시트 월로 가릅니다. 대시보드가 쓰는 기준과 같습니다.</div>`}
   </div>`;
 }
 
@@ -2865,7 +2865,7 @@ function dbRow(table, idx) {
    ========================================================================= */
 function scr_A01() {
   return `<div class="loginbox"><div class="box">
-    <span class="mark">회사 ✦ NEO</span>
+    <span class="mark">VMS</span>
     <h3>운영 담당 시스템</h3>
     <p>사내망에서만 접속됩니다</p>
     <button class="btn pri" onclick="loginGo()">
@@ -3005,7 +3005,7 @@ function render() {
   document.getElementById('cDesc').innerHTML =
     `<span class="pill ${s.st === '운영' ? 'ok' : (s.st === '계획' ? '' : 'warn')}">${s.st}</span>
      <span class="pill info">${s.p}</span> ${esc(s.d)}`;
-  document.getElementById('dUrl').textContent = 'https://vms.example.com' + (host.r.startsWith('/') ? host.r : '/…');
+  document.getElementById('dUrl').textContent = 'https://vms.internal' + (host.r.startsWith('/') ? host.r : '/…');
   const body = (host.fn || s.fn)();
   document.getElementById('app').innerHTML = (s.bare || host.bare) ? body : sidebar(s.host || id) + body;
   drawRail();

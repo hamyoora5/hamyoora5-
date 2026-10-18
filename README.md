@@ -47,7 +47,7 @@
     *   **마감 교차 대조:** 기준 파일 5종을 대조해 수량·정산금액 확정
 *   **설계 관점:** 기존 엑셀 업무 방식은 유지하고 집계·문서 생성만 자동화하여 현장 도입 저항 최소화
 *   **기술 스택:** Python, Flask, SQLAlchemy, PostgreSQL (Aurora), Docker, AWS App Runner, Microsoft Graph, SSO SSO
-*   **화면시안:** [23개 화면 동작 시안](https://hamyoora5.github.io/hamyoora5-/showcase/neovms/demo.html) · [사용자 매뉴얼 16장](https://hamyoora5.github.io/hamyoora5-/showcase/neovms/manual.html) · [설명](showcase/neovms/README.md)
+*   **화면시안:** [23개 화면 동작 시안](https://hamyoora5.github.io/hamyoora5-/showcase/vms/demo.html) · [사용자 매뉴얼 16장](https://hamyoora5.github.io/hamyoora5-/showcase/vms/manual.html) · [설명](showcase/vms/README.md)
 
 ### 2. 외주 통합관리 시스템 — 설계 단계
 

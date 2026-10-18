@@ -1,6 +1,6 @@
-# 외주관리 시스템 — 외주관리시스템
+# VMS — 외주관리시스템
 
-> 회사네오 운영 담당 외주 운영 도구. 외주 발주내역과 입고현황을 토대로
+> 사내 운영 담당 외주 운영 도구. 외주 발주내역과 입고현황을 토대로
 > 지금 외주가 어디까지 왔는지 보고 관리합니다.
 
 클라우드 문서 에 있는 발주·실적·단가 엑셀을 **읽기 전용**으로 연동해 외주처별 진행률과
@@ -10,7 +10,7 @@
 | | |
 | --- | --- |
 | 담당 | 운영 담당 |
-| 배포 | AWS App Runner (회사 Incubation Portal) · 사내망 전용 |
+| 배포 | AWS App Runner (사내 배포 포털) · 사내망 전용 |
 | 로그인 | 회사 계정(SSO) 단일 |
 | 원본 | 클라우드 문서 엑셀 3종 (읽어서 적재만) |
 | 화면 | 23개 — 운영 19 · 확장 계획 4 |
@@ -58,15 +58,15 @@ GitHub 는 저장소의 `.html` 파일을 렌더링하지 않고 소스로 보�
 **① GitHub Pages (권장)** — 저장소 `Settings → Pages → Source: main / root` 로 켜면
 
 ```
-https://hamyoora5.github.io/hamyoora5-/showcase/neovms/demo.html
-https://hamyoora5.github.io/hamyoora5-/showcase/neovms/manual.html
+https://hamyoora5.github.io/hamyoora5-/showcase/vms/demo.html
+https://hamyoora5.github.io/hamyoora5-/showcase/vms/manual.html
 ```
 
 **② Pages 를 켜지 않고 볼 때**
 
 ```
-https://htmlpreview.github.io/?https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/neovms/demo.html
-https://htmlpreview.github.io/?https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/neovms/manual.html
+https://htmlpreview.github.io/?https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/vms/demo.html
+https://htmlpreview.github.io/?https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/vms/manual.html
 ```
 
 **③ 내려받아 보기** — 두 파일을 받아 브라우저로 열면 그대로 동작합니다.
@@ -131,7 +131,7 @@ https://htmlpreview.github.io/?https://github.com/hamyoora5/hamyoora5-/blob/main
 | 항목 | 확정 내용 | 화면에 미치는 영향 |
 | --- | --- | --- |
 | **데이터 원본** | 클라우드 문서 엑셀이 원본, 시스템은 읽어 적재만 한다 | 조회 화면은 적재된 DB를 읽는다. 입력 화면이 있어도 기본은 잠겨 있다 |
-| **기준월** | 적재된 발주번호 `NEO-YYYYMM-` 의 최댓값 | 대시보드에 월 선택이 없다. 새 달 시트가 없으면 지난달이 기준이고 배너에 함께 적는다 |
+| **기준월** | 적재된 발주번호 `ORD-YYYYMM-` 의 최댓값 | 대시보드에 월 선택이 없다. 새 달 시트가 없으면 지난달이 기준이고 배너에 함께 적는다 |
 | **월 선택** | 발주관리는 원본에 있는 월 시트만 탭으로 띄운다 | 드롭다운이 아니라 시트 탭이다. 없는 달은 뜨지 않는다 |
 | **동기화** | 날짜가 바뀐 뒤 첫 진입 때 1회 | 수동 동기화 버튼이 없다. 당일 중 원본 변경은 다음 날 반영. 단가표만 수동 동기화 가능 |
 | **입고 집계** | 모수는 기준월, 분자는 기준월 이후를 이어서 센다 | 다음 달 시트가 없어도 진행률이 멈춰 보이지 않는다 |
