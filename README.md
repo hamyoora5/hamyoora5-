@@ -47,14 +47,14 @@
     *   **마감 교차 대조:** 기준 파일 5종을 대조해 수량·정산금액 확정
 *   **설계 관점:** 기존 엑셀 업무 방식은 유지하고 집계·문서 생성만 자동화하여 현장 도입 저항 최소화
 *   **기술 스택:** Python, Flask, SQLAlchemy, PostgreSQL (Aurora), Docker, AWS App Runner, Microsoft Graph, SSO SSO
-*   **운영 데모:** [23개 화면 동작 데모](https://hamyoora5.github.io/hamyoora5-/showcase/vms/demo.html)
+*   **첨부 자료:** [화면 데모 (demo.html)](https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/vms/demo.html)
 
 ### 2. 외주 통합관리 시스템 — 설계 단계
 
 *   **소개:** 발주 → 생산 시작 → 품질검사 → 출고 → 마감 정산 → 지급으로 흩어진 외주 업무를 단일 시스템으로 일원화하는 설계. 1차 범위는 비실시간 원격 품질검사와 거래명세서 등록
 *   **산출물:** 화면정의서 42종, 클릭 가능한 화면 시안 57종, 아키텍처 설계, DB 구조 검토안
 *   **설계 관점:** 같은 사실을 여러 곳에 중복 기록하는 구조 제거, 증빙 무결성 확보, 향후 검사 자동화를 위한 데이터 축적 전제
-*   **기획 시안:** [업무 흐름 데모](https://hamyoora5.github.io/hamyoora5-/showcase/remote-inspection/mockup.html) · [업무 흐름 설계 문서](showcase/remote-inspection/process.md)
+*   **첨부 자료:** [화면 시안 (mockup.html)](https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/remote-inspection/mockup.html) · [업무 흐름 설계 (process.md)](https://github.com/hamyoora5/hamyoora5-/blob/main/showcase/remote-inspection/process.md)
 
 ### 3. 반복 업무 자동화
 
